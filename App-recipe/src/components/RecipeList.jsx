@@ -1,13 +1,14 @@
-import React from "react";
-import RecipeCard from "./RecipeCard";
+// src/components/RecipeList.jsx
+import React, { useContext } from 'react';
+import { RecipeContext } from '../context/RecipeContext';
+import RecipeCard from './RecipeCard';
 import styles from '../styles/RecipeList.module.css';
-import recipesList from '../data/recipesList';
 
 export default function RecipeList() {
-
+    const { recipes } = useContext(RecipeContext);
     return (
         <div className={styles.grid}>
-            {recipesList.map((recipe) => (
+            {recipes.map(recipe => (
                 <RecipeCard key={recipe.id} recipe={recipe} />
             ))}
         </div>

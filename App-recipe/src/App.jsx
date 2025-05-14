@@ -1,16 +1,9 @@
-import { useState } from 'react'
-import React from 'react'
-import Home from './pages/Home'
-import './App.css'
+// src/App.jsx
+import React from 'react';
+import Home from './pages/Home';
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-   <div className='min-h-screen bg-gray-50 text-gray-800'>
-       <Home />
-   </div>
-  )
+    return <Home />;
 }
 
-export default App
+export default App;
