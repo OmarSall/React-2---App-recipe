@@ -1,0 +1,13 @@
+.container {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.heading {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #111827;
+}
