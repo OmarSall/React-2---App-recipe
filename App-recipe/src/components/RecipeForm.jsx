@@ -21,8 +21,8 @@ export default function RecipeForm({ editRecipe = null, onClose }) {
         }
     }, [editRecipe]);
 
-    const handleImage = (e) => {
-        const file = e.target.files[0];
+    const handleImage = (event) => {
+        const file = event.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onloadend = () => setImage(reader.result);
@@ -30,8 +30,8 @@ export default function RecipeForm({ editRecipe = null, onClose }) {
         }
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    const handleSubmit = (event) => {
+        event.preventDefault();
         const recipe = {
             id: editRecipe ? editRecipe.id : Date.now(),
             title,
@@ -42,7 +42,9 @@ export default function RecipeForm({ editRecipe = null, onClose }) {
         };
         if (editRecipe) {
             updateRecipe(recipe);
-            if (onClose) onClose();
+            if (onClose) {
+                onClose();
+            }
         } else {
             addRecipe(recipe);
         }

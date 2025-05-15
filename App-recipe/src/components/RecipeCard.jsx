@@ -11,7 +11,7 @@ export default function RecipeCard({ recipe }) {
 
     return (
         <div className={styles.card}>
-            {recipe.image ? <img src={recipe.image} alt="recipe" className={styles.image} /> : <div className={styles.placeholder}>No Image</div>}
+            {recipe.image ? <img src={recipe.image} alt='recipe' className={styles.image} /> : <div className={styles.placeholder}>No Image</div>}
             <h3 className={styles.title}>{recipe.title}</h3>
             <p className={styles.preview}>{recipe.ingredients}</p>
             <div className={styles.actions}>
