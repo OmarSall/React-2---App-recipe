@@ -19,7 +19,9 @@ export function RecipeProvider({children}) {
     }, []);
 
     useEffect(() => {
-        if (recipes.length === 0) return;
+        if (recipes.length === 0) {
+            return;
+        }
         if (isInitialized) {
             try {
                 localStorage.setItem('recipes', JSON.stringify(recipes));

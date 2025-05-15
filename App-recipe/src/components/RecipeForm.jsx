@@ -59,10 +59,10 @@ export default function RecipeForm({ editRecipe = null, onClose }) {
         <div className={styles.wrapper}>
             <h2 className={styles.title}>{editRecipe ? 'Edit Recipe' : 'Create New Recipe'}</h2>
             <form className={styles.form} onSubmit={handleSubmit}>
-                <input className={styles.input} placeholder="Title" value={title} onChange={e => setTitle(e.target.value)} />
-                <textarea className={styles.input} placeholder="Ingredients" value={ingredients} onChange={e => setIngredients(e.target.value)} />
-                <input className={styles.input} placeholder="Allergens" value={allergens} onChange={e => setAllergens(e.target.value)} />
-                <textarea className={styles.input} placeholder="Steps" value={steps} onChange={e => setSteps(e.target.value)} />
+                <input className={styles.input} placeholder="Title" value={title} onChange={event => setTitle(event.target.value)} />
+                <textarea className={styles.input} placeholder="Ingredients" value={ingredients} onChange={event => setIngredients(event.target.value)} />
+                <input className={styles.input} placeholder="Allergens" value={allergens} onChange={event => setAllergens(event.target.value)} />
+                <textarea className={styles.input} placeholder="Steps" value={steps} onChange={event => setSteps(event.target.value)} />
                 <input type="file" className={styles.input} onChange={handleImage} />
                 <button type="submit" className={styles.button}>
                     {editRecipe ? 'Update Recipe' : 'Save Recipe'}
